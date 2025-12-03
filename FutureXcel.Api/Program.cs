@@ -24,6 +24,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseStaticFiles();                  // serve files from wwwroot
+app.MapFallbackToFile("index.html");   // open index.html by default
+
 app.MapControllers();
 
 
