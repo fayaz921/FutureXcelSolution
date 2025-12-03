@@ -6,12 +6,33 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{4D222127-D17E-4EA3-982D-F96CD430279F}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{1647790A-F655-40D2-A354-320D9C6896C9}"
+	ProjectSection(SolutionItems) = preProject
+		CreateTables.sql = CreateTables.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureXcel.Api", "FutureXcel.Api\FutureXcel.Api.csproj", "{9BF30FAD-1261-4CD9-A88C-9A9C440637DB}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BF30FAD-1261-4CD9-A88C-9A9C440637DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF30FAD-1261-4CD9-A88C-9A9C440637DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF30FAD-1261-4CD9-A88C-9A9C440637DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF30FAD-1261-4CD9-A88C-9A9C440637DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9BF30FAD-1261-4CD9-A88C-9A9C440637DB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9BA262B4-25BA-4F28-8004-F535E18F02DE}
