@@ -10,6 +10,6 @@ namespace FutureXcel.Api.Data
 
         }
 
-        DbSet<Testitems> Testitems { get; set; }
+       public DbSet<Testitem> Testitems { get; set; }
     }
 }
