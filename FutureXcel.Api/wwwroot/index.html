@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Built by Muhammad Fayaz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #healthStatus {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend placeholder</h1>
+    <p>Backend Health Check:</p>
+    <div id="healthStatus">Checking...</div>
+
+    <script>
+        async function checkHealth() {
+            try {
+                // Adjust port if your backend runs on a different one
+                const response = await fetch("/api/health");
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                const data = await response.json();
+                document.getElementById("healthStatus").innerText = data.status;
+            } catch (error) {
+                document.getElementById("healthStatus").innerText = "Error: " + error.message;
+            }
+        }
+
+        // Call the function when page loads
+        checkHealth();
+    </script>
+</body>
+</html>
